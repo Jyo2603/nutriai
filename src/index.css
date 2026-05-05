@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 font-sans antialiased;
+    margin: 0;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* Glass-morphism card component */
+  .glass-card {
+    @apply bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl shadow-lg;
+  }
+  
+  .glass-card-hover {
+    @apply glass-card hover:bg-white/25 hover:shadow-xl transition-all duration-300 hover:scale-105;
+  }
+  
+  /* Nutrition-themed gradient buttons */
+  .btn-primary {
+    @apply bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply bg-white/30 backdrop-blur-sm border border-white/40 text-gray-700 font-medium py-2 px-4 rounded-lg hover:bg-white/40 transition-all duration-300;
+  }
+  
+  /* Input styling */
+  .input-field {
+    @apply bg-white/30 backdrop-blur-sm border border-white/40 rounded-lg px-4 py-3 text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent transition-all duration-300;
+  }
+  
+  /* Nutrition-themed backgrounds */
+  .bg-nutrition-gradient {
+    @apply bg-gradient-to-br from-green-50 via-blue-50 to-purple-50;
+  }
+  
+  .bg-meal-card {
+    @apply bg-gradient-to-br from-orange-100 to-red-100;
+  }
+  
+  .bg-recipe-card {
+    @apply bg-gradient-to-br from-yellow-100 to-orange-100;
+  }
+  
+  .bg-nutrition-card {
+    @apply bg-gradient-to-br from-green-100 to-teal-100;
+  }
+}
